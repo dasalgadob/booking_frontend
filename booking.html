@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://getbootstrap.com/docs/4.3/examples/starter-template/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Booking App</title>
+
+    <!-- Bootstrap core CSS -->
+<link href="./booking_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+  body, html {
+    height: 100%;
+
+    color: white;
+  }
+
+  #box-container {
+    height: 2000px;
+    display: flex;
+  }
+
+  #box-1 {
+    background-color: dodgerblue;
+    width: 20%;
+    height: 50%;
+
+  }
+
+  #box-2 {
+    background-color: white;
+    width: 50%;
+    height: 50%;
+  padding: 15px;
+  }
+  .center {
+  margin: 15px;
+  width: 50%;
+  border: 3px solid green;
+  padding: 40px;
+}
+
+.table {
+  padding: 40px;
+}
+    </style>
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+
+
+
+
+  <div id="box-container">
+    <div id="box-1">
+      <a class="btn btn-default center" href="#" role="button">Reservas</a>
+      <br>
+      <a class="btn btn-default center" href="#" role="button">Peliculas</a>
+    </div>
+    <div id="box-2">
+      <h5>Reservas realizadas </h5>
+      <div class="input-group">
+      Seleccionar fecha: <input type="date" class="form-control" id="date" name="by_date">
+      </div>
+      <div class="table">
+      <table class="pretty table table-striped table-bordered table-sm">
+        <thead>
+          <tr>
+            <th>Pelicula</th>
+            <th>nombre reservante</th>
+            <th>correo electronico</th>
+            <th>Cedula</th>
+            <th>Celular</th>
+          </tr>
+        </thead>
+      </table>
+      <div>
+    </div>
+  </div>
+<!--  <div class="starter-template">
+    <h1>Bootstrap starter template</h1>
+    <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+  </div> -->
+<script src="./booking_files/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="./booking_files/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+
+<script>
+$('#date').change(function(){
+    //changeBookingList();
+    console.log($(this).val());
+    $.get( "localhost:3000/bookings/?booking_date=")
+      .done(function( data ) {
+        }
+      });
+  }).change();
+</script>
+
+</body></html>
